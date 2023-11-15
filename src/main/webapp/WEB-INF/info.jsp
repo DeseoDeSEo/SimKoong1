@@ -122,9 +122,13 @@ input {
 					<h2>본인 정보 입력</h2>
 					<br> <br> <br> <br>
 					<form action="${cpath}/fileUpload" method="post" enctype="multipart/form-data" id="imageForm1">
-						<label for="uploadInput" id="uploadButton">이미지 선택</label> <input
-							type="file" id="photo" name="file" accept="image/*">
-						<button type="submit" onclick="uploadImage()" id="uploadButton">업로드</button>
+						<label for="uploadInput" id="uploadButton">이미지 선택</label> 
+						<input type="file" id="photo" name="file" accept="image/*">
+						<input type="file" id="photo1" name="file" accept="image/*">
+						<input type="file" id="photo2" name="file" accept="image/*">
+						<button type="submit" onclick="removeFile()" id="uploadButton">업로드</button>
+						<button type="button" onclick="uploadImage()" id="btns_del_btn">삭제</button>
+						
 					</form>
 				</div>
 			</div>
