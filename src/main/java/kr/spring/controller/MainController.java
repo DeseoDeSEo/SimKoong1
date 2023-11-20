@@ -238,9 +238,6 @@ public class MainController {
 			    // sessionPhoto가 null일 때 처리할 코드를 여기에 추가하세요
 			}
 		model.addAttribute("fileName", fileName);
-		
-		
-		
 		return "profile";
 	}
 	
@@ -250,8 +247,36 @@ public class MainController {
 		return "update";
 	}
 	@PostMapping("/update")
-	public String update() {
+	public String update(Info info, HttpSession session) {
+		String username_session =((Info) session.getAttribute("mvo")).getUsername();
+		DriverConfigLoader loader = dbService.getConnection();
+		Map<String, Object> columnValues = new HashMap<>();
+		columnValues.put("username", username_session);
+		List<Info> listInfo = dbService.findAllByColumnValues(loader, Info.class, columnValues);
 		
+		
+		// 어디를 업데이트할지, 값은 뭔지를 설정하기
+		Map<String, Object> whereUpdate = new HashMap<>();
+		Map<String, Object> updateValue = new HashMap<>();
+		
+		whereUpdate.put("username", username_session);
+		updateValue.put("nickname", info.getNickname());
+		updateValue.put("age", info.getAge());
+		updateValue.put("phone", info.getPhone());
+		updateValue.put("address", info.getAddress());
+		updateValue.put("interest", info.getInterest());
+		updateValue.put("mbti", info.getMbti());
+		updateValue.put("sport", info.getMbti());
+		updateValue.put("smoking", info.getSmoking());
+		updateValue.put("drinking", info.getDrinking());
+		updateValue.put("job", info.getJob());
+		updateValue.put("school", info.getSchool());
+		updateValue.put("aboutme", info.getAboutme());
+		
+		// 업데이트 진행
+		dbService.updateByColumnValues(loader, Info.class, updateValue, whereUpdate);	
+		session.setAttribute("mvo", dbService.findAllByColumnValues(loader, Info.class, columnValues).get(0));
+		return "redirect:/profile";
 	}
 
 	@GetMapping("/test")
