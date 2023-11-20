@@ -97,8 +97,17 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/json-utils/2.21.23/json-utils-2.21.23.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/endpoints-spi/2.21.23/endpoints-spi-2.21.23.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/apache-client/2.21.23/apache-client-2.21.23.jar" enabled="true" runInBatchMode="false"/>
+<<<<<<< HEAD
     <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/netty-nio-client/2.21.23/netty-nio-client-2.21.23.jar" enabled="true" runInBatchMode="false"/>
+=======
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/commons-codec/commons-codec/1.15/commons-codec-1.15.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/netty-nio-client/2.21.23/netty-nio-client-2.21.23.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-codec-http/4.1.100.Final/netty-codec-http-4.1.100.Final.jar" enabled="true" runInBatchMode="false"/>
+>>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
     <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-codec-http2/4.1.100.Final/netty-codec-http2-4.1.100.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-transport-classes-epoll/4.1.100.Final/netty-transport-classes-epoll-4.1.100.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/acmpca/2.21.23/acmpca-2.21.23.jar" enabled="true" runInBatchMode="false"/>
@@ -467,6 +476,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/datazone/2.21.23/datazone-2.21.23.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/cloudwatch-metric-publisher/2.21.23/cloudwatch-metric-publisher-2.21.23.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/software/amazon/awssdk/launchwizard/2.21.23/launchwizard-2.21.23.jar" enabled="true" runInBatchMode="false"/>
+<<<<<<< HEAD
     <factorypathentry kind="VARJAR" id="M2_REPO/com/amazonaws/aws-java-sdk/1.11.1000/aws-java-sdk-1.11.1000.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/amazonaws/aws-java-sdk-lookoutequipment/1.11.1000/aws-java-sdk-lookoutequipment-1.11.1000.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/amazonaws/aws-java-sdk-mgn/1.11.1000/aws-java-sdk-mgn-1.11.1000.jar" enabled="true" runInBatchMode="false"/>
@@ -735,6 +745,8 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/amazonaws/aws-java-sdk-s3/1.12.592/aws-java-sdk-s3-1.12.592.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/amazonaws/jmespath-java/1.12.592/jmespath-java-1.12.592.jar" enabled="true" runInBatchMode="false"/>
+=======
+>>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/boot/spring-boot-starter-tomcat/3.1.5/spring-boot-starter-tomcat-3.1.5.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.15/tomcat-embed-websocket-10.1.15.jar" enabled="true" runInBatchMode="false"/>
