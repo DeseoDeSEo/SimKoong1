@@ -1,4 +1,3 @@
-
 package kr.spring.config;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;

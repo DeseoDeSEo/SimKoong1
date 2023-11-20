@@ -14,7 +14,7 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 
 @SpringBootTest
 class PracticeApplicationTests {
-
+	
 	@Autowired
 	private AmazonS3 s3client;
 

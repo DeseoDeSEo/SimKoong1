@@ -19,7 +19,7 @@ import com.amazonaws.util.IOUtils;
 
 @Controller
 public class FileController {
-
+	
 	@Autowired
     private AmazonS3 s3client; // 초기화 필요
 
@@ -31,7 +31,7 @@ public class FileController {
 
             S3Object s3object = s3client.getObject(bucketName, fileName);
             S3ObjectInputStream inputStream = s3object.getObjectContent();
-
+            
             byte[] bytes = IOUtils.toByteArray(inputStream);
             String base64Encoded = Base64.encodeBase64String(bytes);
 
@@ -40,10 +40,10 @@ public class FileController {
 			// TODO: handle exception
     		e.printStackTrace();
 		}
+        
+        
 
-
-
-
+     
         return "test"; // JSP 파일 이름
     }
 }
