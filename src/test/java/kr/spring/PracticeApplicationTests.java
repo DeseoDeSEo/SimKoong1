@@ -1,6 +1,5 @@
 package kr.spring;
 
-<<<<<<< HEAD
 import java.io.File;
 
 import org.junit.jupiter.api.Test;
@@ -9,9 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.PutObjectRequest;
-
-
-
 
 @SpringBootTest
 class PracticeApplicationTests {
@@ -25,16 +21,6 @@ class PracticeApplicationTests {
 		String bucketName = "simkoong-s3";
 		String fileName="1.jpg";
 		s3client.putObject(new PutObjectRequest(bucketName, fileName, file));
-=======
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class PracticeApplicationTests {
-
-	@Test
-	void contextLoads() {
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
 	}
 
 }

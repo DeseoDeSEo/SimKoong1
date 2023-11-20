@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-<<<<<<< HEAD
                                             
     
     
-=======
-                                    
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
     
     
     
@@ -14,13 +10,9 @@
     
     
     <wb-module deploy-name="practice-0.0.1-SNAPSHOT">
-<<<<<<< HEAD
                                                                                         
         
         
-=======
-                                                                        
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
         
         
         
@@ -29,13 +21,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-<<<<<<< HEAD
                                                                                         
         
         
-=======
-                                                                        
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
         
         
         
@@ -44,13 +32,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-<<<<<<< HEAD
                                                                                         
         
         
-=======
-                                                                        
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
         
         
         
@@ -59,13 +43,9 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-<<<<<<< HEAD
                                                                                         
         
         
-=======
-                                                                        
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
         
         
         
@@ -75,13 +55,9 @@
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
-<<<<<<< HEAD
                                                                                         
         
         
-=======
-                                                                        
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
         
         
         
@@ -90,13 +66,9 @@
         
         
         <property name="context-root" value="practice"/>
-<<<<<<< HEAD
                                                                                         
         
         
-=======
-                                                                        
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
         
         
         
@@ -105,13 +77,9 @@
         
         
         <property name="java-output-path" value="/FinalProject_web/target/classes"/>
-<<<<<<< HEAD
                                                                                     
     
     
-=======
-                                                                    
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
     
     
     
@@ -120,13 +88,9 @@
     
     
     </wb-module>
-<<<<<<< HEAD
                                         
 
 
-=======
-                                
->>>>>>> 4c137f3fe555a82c4b85f94a40531a0fdc7d3b69
 
 
 
