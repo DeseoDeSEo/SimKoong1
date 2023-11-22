@@ -183,10 +183,10 @@ public class InfoServiceImpl implements InfoService {
 	public void InsertInfo(String nickname, String username, String password) {
 
 		Map<Integer, String> files = new HashMap<>();
-		files.put(1, "default.png");
-		files.put(2, "default.png");
-		files.put(3, "default.png");
-		files.put(4, "default.png");
+		files.put(1, "s3://simkoong-s3/simkoong.jpg");
+		files.put(2, "s3://simkoong-s3/simkoong.jpg");
+		files.put(3, "s3://simkoong-s3/simkoong.jpg");
+		files.put(4, "s3://simkoong-s3/simkoong.jpg");
 		
 		Info info = new Info();
 		info.setNickname(nickname);
