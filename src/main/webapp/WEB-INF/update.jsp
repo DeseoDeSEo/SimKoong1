@@ -336,8 +336,10 @@ a.slide__next,
 										<div class="mt-3">
 											<h4>${mvo.nickname}님</h4>
 											<p class="text-secondary mb-1">${mvo.job}</p>
-											<p class="text-muted font-size-sm">${mvo.address}</p>
+											<p class="text-muted font-size-sm">${mvo.address[0]}</p>
 											<a href="/boot/info" id="photoLink"> 사진 추가 및 업데이트 </a>
+											<br>
+											<a href="/boot/location" id="photoLink">현재 위치 설정</a>
 
 										</div>
 									</div>
@@ -382,7 +384,7 @@ a.slide__next,
 											<div class="col-sm-3">
 												<h6 class="mb-0">Address</h6>
 											</div>
-											<div class="col-sm-9">
+											<div class="col-sm-9">										
 												<input type="text" id="address" name="address"
 													value="${mvo.address}">
 											</div>

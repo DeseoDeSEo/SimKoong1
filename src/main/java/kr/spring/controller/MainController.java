@@ -9,10 +9,12 @@ import java.util.Map;
 
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
@@ -33,6 +35,7 @@ import com.datastax.oss.driver.api.core.config.DriverConfigLoader;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import kr.spring.entity.AddressData;
 import kr.spring.entity.Info;
 import kr.spring.service.DBService;
 import kr.spring.service.InfoService;
@@ -263,7 +266,6 @@ public class MainController {
 			}
 		}
 		model.addAttribute("imageDatas", imageDatas);
-		model.addAttribute("imageData", base64Encoded);
 		return "profile";
 	}
 
@@ -333,6 +335,54 @@ public class MainController {
 		session.setAttribute("mvo", dbService.findAllByColumnValues(loader, Info.class, columnValues).get(0));
 		return "redirect:/profile";
 	}
+	
+	@GetMapping("/location")
+	public String locationPage() {
+		System.out.println("위치 정보 확인");
+		
+		return "location";
+	}
+	@PostMapping("/location")
+    public ResponseEntity<String> receiveAddress(@RequestBody AddressData addressData, HttpSession session, Info info) {
+        // DB연결
+		String username_session = ((Info)session.getAttribute("mvo")).getUsername();
+		DriverConfigLoader loader = dbService.getConnection();
+		Map<String, Object> columnValues = new HashMap<>();
+		columnValues.put("username", username_session);
+		List<Info> listInfo = dbService.findAllByColumnValues(loader, Info.class, columnValues);
+		
+		Map<String, Object> whereUpdate = new HashMap<>();
+		Map<String, Object> updateValue = new HashMap<>();
+		
+		String roadAddress = addressData.getRoadAddress();
+		String cityName = addressData.getCityName(); 
+		String latitude =addressData.getLatitude();
+		String longitude = addressData.getLongitude();
+        // 예시로 받은 데이터를 콘솔에 출력해보겠습니다.
+        System.out.println("도로명 주소: " + roadAddress);
+        System.out.println("도시명: " + cityName);
+        System.out.println("경도 "+ latitude);
+        System.out.println("위도 "+ longitude);
+        
+        List<String> addressList= new ArrayList<>();
+		addressList.add(roadAddress);
+		addressList.add(latitude);
+		addressList.add(longitude);
+		
+		whereUpdate.put("username", username_session);
+		updateValue.put("address", addressList);
+		
+		dbService.updateByColumnValues(loader, Info.class, updateValue, whereUpdate);
+		session.setAttribute("mvo", dbService.findAllByColumnValues(loader, Info.class, columnValues).get(0));
+    	
+        
+     // 클라이언트에게 JSON 형태로 응답을 보냅니다.
+        String response = "{\"message\": \"주소 정보를 성공적으로 받았습니다.\"}";
+        return ResponseEntity.ok(response);
+    }
+	
+	
+	
 
 	@GetMapping("/test")
 	public String showTestPage() {

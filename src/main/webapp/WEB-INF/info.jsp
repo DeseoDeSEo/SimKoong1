@@ -174,7 +174,6 @@ div.desc {
 		<!-- Header Start -->
 		<br> <br>
 		<div class="container">
-		<a href="/boot/test">test해보기</a>
 			<div class="row">
 				<div class="col-12 text-center">
 					<h2>4개의 사진을 업로드 해주세요</h2>

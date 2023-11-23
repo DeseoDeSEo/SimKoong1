@@ -2,6 +2,7 @@ package kr.spring.service;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.Instant;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -193,6 +194,8 @@ public class InfoServiceImpl implements InfoService {
 		info.setUsername(username);
 		info.setPassword(password);
 		info.setPhoto(files);
+		info.setRegister_date(Instant.now());
+		info.setStatus(true);
 		
 		
 		
