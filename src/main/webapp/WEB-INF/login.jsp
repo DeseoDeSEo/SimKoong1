@@ -50,8 +50,7 @@
             <div class="container">
                 <div class="row g-2">
                     <div class="col-md-4 mx-auto text-center mb-3">
-                        <h2 class="text-black">Login</h2>
-                        
+                        <h2 class="text-black">Login</h2>                       
                         <form action="${cpath}/login" method="post" >
                         	<table>
                         		<tr>

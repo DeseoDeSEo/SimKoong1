@@ -327,7 +327,6 @@ a.slide__next,
 															<div class="image-box">
 																<img src="data:image/jpeg;base64,${imageData}" alt="S3 Image" width="200">
 															</div>
-
 															<c:choose>
 																<c:when test="${i.count eq 1}">
 																	<!-- i가 1일때는 이전버튼 :4, 다음버튼은 2  -->
@@ -355,7 +354,7 @@ a.slide__next,
 										<div class="mt-3">
 											<h4>${mvo.nickname}님 </h4>
 											<p class="text-secondary mb-1">${mvo.job}</p>
-											<p class="text-muted font-size-sm">${mvo.address}</p>
+											<p class="text-muted font-size-sm"> ${mvo.address[0].replace('[','')} </p>
 											<a href="/boot/info" id="photoLink"> 사진 추가 및 업데이트 </a>
 										</div>
 										<a href="sendlike" class="nav-item nav-link">보낸 좋아요</a>
@@ -392,7 +391,7 @@ a.slide__next,
 										<div class="col-sm-3">
 											<h6 class="mb-0">Address</h6>
 										</div>
-										<div class="col-sm-9">${mvo.address}</div>
+										<div class="col-sm-9">${mvo.address[0].replace('[','')}</div>
 									</div>
 									<hr>
 									<div class="row">

@@ -57,12 +57,6 @@ public class MainController {
 		return "index";
 	}
 
-	@GetMapping("/recommend")
-	public String showRecommendPage() {
-		System.out.println("추천화면으로 들어왔음.");
-		return "recommend";
-	}
-
 	@GetMapping("/like")
 	public String showLikePage() {
 		System.out.println("좋아요로 들어왔음.");
@@ -382,7 +376,11 @@ public class MainController {
 	@GetMapping("/otherProfile")
 	public String showOtherProfilePage(HttpSession session, Info info, Model model) {
 		System.out.println("다른 유저의 프로필 방문");
+		
 		Info userInfo = (Info) session.getAttribute("mvo");
+		
+		
+//		사진 가져오는 부분
 		Map<Integer, String> photoMap = userInfo.getPhoto();
 		List<String> imageDatas = new ArrayList<>();
 		String bucketName = "simkoong-s3";

@@ -169,7 +169,7 @@ body {
             geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
         }
         
-
+        /* getLocation호출해서 두번째로 옴.(2) */
         function initMap(position) {
             var mapContainer = document.getElementById('map');
             var mapOption = {
@@ -198,7 +198,7 @@ body {
                 });
             });     
         }
-
+/* getLocation호출해서 여기로 옴.(1) */
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {

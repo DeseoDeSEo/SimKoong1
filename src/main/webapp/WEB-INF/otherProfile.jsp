@@ -43,12 +43,16 @@
 
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <style>
 body {
@@ -57,8 +61,8 @@ body {
 }
 
 .section {
-
 	position: relative;
+	height: 600px;
 }
 
 .gray-bg {
@@ -67,11 +71,15 @@ body {
 
 img {
 	max-width: 80%;
+	align-items: center;
+	text-align: center;
 }
 
 img {
-	vertical-align: middle;
+	display: flex; vertical-align : middle;
 	border-style: none;
+	align-items: center;
+	vertical-align: middle;
 }
 /* About Me 
 	---------------------*/
@@ -113,18 +121,18 @@ img {
 }
 
 .about-list .media {
-	padding: 5px 0;
+	padding: 10px 0;
 }
 
 .about-list label {
 	color: #20247b;
 	font-weight: 600;
-	width: 88px;
+	width: 90px;
 	margin: 0;
 	position: relative;
 }
 
-.about-list label:after {
+/* .about-list label:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -141,19 +149,25 @@ img {
 	margin: auto;
 	opacity: 0.5;
 }
-
+ */
 .about-list p {
 	margin: 0;
+	margin-top: 7%;
 	font-size: 15px;
 }
 
 @media ( max-width : 991px) {
 	.about-avatar {
-		margin-bottom: 50px;
+		margin: 0 auto 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
+
 .counter {
-    height: 100px; /* 여기에 조절하고 싶은 높이를 입력하세요 */
+	position: relative;
+	height: 100px;
 }
 
 .about-section .counter {
@@ -180,8 +194,9 @@ img {
 }
 
 div#center {
-    margin-top: 100px;
+	margin-top: 70px;
 }
+
 mark {
 	background-image: linear-gradient(rgba(252, 83, 86, 0.6),
 		rgba(252, 83, 86, 0.6));
@@ -193,6 +208,11 @@ mark {
 	color: currentColor;
 }
 
+div#left {
+	align-items: center;
+	margin: 0 auto 50px;
+}
+
 .theme-color {
 	color: #ff9a9e;
 }
@@ -202,17 +222,17 @@ mark {
 }
 
 .slider-container {
-	background: #f5f5f5;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 60%;
+	width: 60%;
 }
 
 .slider {
 	width: 100%;
-	max-width: 350px;
-	height: 550px;
+	max-width: 300px;
+	height: 400px;
 	text-align: center;
 	border-radius: 20px;
 	overflow: hidden;
@@ -221,20 +241,17 @@ mark {
 
 .slides {
 	display: flex;
-
 	position: relative;
-	scroll-behavior: smooth;
-	scroll-snap-type: x mandatory;
-	height:450px;
+	width: 100%;
+	height: 400px;
 }
 
 .slide {
 	justify-content: center;
 	align-items: center;
 	flex-shrink: 0;
-	width: 100%;
+	width: 300px;
 	height: 400px;
-	scroll-snap-align: center;
 	margin-right: 0px;
 	box-sizing: border-box;
 	background: #f5f5f5;
@@ -252,25 +269,36 @@ mark {
 	border: none;
 }
 
-a.slide__prev, .slider::before {
+
+
+
+a.slide__prev, a.slider::before {
+	/* 왼쪽 화살표 실제기능 구현 영역 */
 	transform: rotate(135deg);
 	-webkit-transform: rotate(135deg);
-	left: 5%;
+	top: 55%;
+	left: 15%;
 }
 
-a.slide__next, .slider::after {
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	right: 5%;
+a.slide__next, a.slider::after {
+	/* 오른쪽 화살표 실제기능 구현 영역 */
+	
+	top: 55%;
+	right: 15%;
 }
 
-.slider::before, .slider::after, .slide__prev, .slide__next {
+a.slider::before, a.slider::after, a.slide__prev, a.slide__next {
+	/* 기능 구현 화살표 */
+	display: inline-block;
 	position: absolute;
-	top: 48%;
-	width: 35px;
-	height: 35px;
-	border: solid black;
-	border-width: 0 4px 4px 0;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	border: solid black; 
+	border-radius: 50%;
+	background-color: white;
+	text-align: center;
+	line-height: 30px;
 	padding: 3px;
 	box-sizing: border-box;
 }
@@ -286,23 +314,31 @@ a.slide__next, .slider::after {
 	height: 600px;
 }
 
+.image-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	width: 300px;
+}
+
 .image-box img {
 	width: 100%; /* 이미지를 부모 요소에 꽉 채웁니다. */
 	height: 100%; /* 이미지를 부모 요소에 꽉 채웁니다. */
+	vertical-align: middle;
 }
-
-
 </style>
 </head>
 <body>
-	<div class="container-xxl bg-white p-0">
+	<div id="container" class="container-xxl bg-white p-0">
 		<jsp:include page="header.jsp"></jsp:include>
 		<div class="container">
 			<section class="section about-section gray-bg" id="about">
-				<div class="row align-items-center flex-row-reverse">
+				<div class="row align-items-center flex-row-reverse"
+					style="margin-top: 0px;">
 					<div class="row" id="center">
-						<div class="col-lg-6">
-							<div class="about-avatar" style="text-align: center">
+						<div class="col-lg-6" id="left">
+							<div class="about-avatar" style="align-items: center;">
 								<div class="slider-container">
 									<div class="slider">
 										<div class="slides">
@@ -316,23 +352,28 @@ a.slide__next, .slider::after {
 													<c:choose>
 														<c:when test="${i.count eq 1}">
 															<!-- i가 1일때는 이전버튼 :4, 다음버튼은 2  -->
-															<a class="slide__prev" href="#slides__4" title="prev"></a>
-															<a class="slide__next" href="#slides__2" title="Next"></a>
+															<a id="slide__prev" class="slide__prev" href="#slides__4"
+																title="prev"></a>
+															<a id="slide__next" class="slide__next" href="#slides__2"
+																title="Next"><i class='fas fa-caret-right' style=' margin-top:-10px; color:black;font-size:36px'></i></a>
 														</c:when>
 														<c:when test="${i.count eq 4}">
 															<!-- i가 4일때는 이전버튼 :3, 다음버튼은 1  -->
-															<a class="slide__prev" href="#slides__3" title="prev"></a>
-															<a class="slide__next" href="#slides__1" title="Next"></a>
+															<a id="slide__prev" class="slide__prev" href="#slides__3"
+																title="prev"></a>
+															<a id="slide__next" class="slide__next" href="#slides__1"
+																title="Next"></a>
 														</c:when>
 														<c:otherwise>
-															<a class="slide__prev" href="#slides__${i.count-1}"
-																title="prev"></a>
-															<a class="slide__next" href="#slides__${i.count+1}"
-																title="Next"></a>
+															<a id="slide__prev" class="slide__prev"
+																href="#slides__${i.count-1}" title="prev"></a>
+															<a id="slide__next" class="slide__next"
+																href="#slides__${i.count+1}" title="Next"></a>
 														</c:otherwise>
 													</c:choose>
 												</div>
 											</c:forEach>
+
 										</div>
 									</div>
 
@@ -340,44 +381,44 @@ a.slide__next, .slider::after {
 							</div>
 						</div>
 
-						<div class="col-lg-6" >
-							<div class="about-text go-to" >
-								<h3 class="dark-color">미나,27</h3>
-								<h6 class="theme-color lead"><span class="glyphicon">&#xe139;</span> 발레리나</h6>
-								
-								<p>
-									안녕하세요. 
-									강아지 키우는 분이랑 같이 산책도 하고 예쁜 카페 가실 분이면 좋겠어요.
-									친하게 지내요:)
-								</p>
+						<div class="col-lg-6">
+							<div class="about-text go-to">
+								<h3 class="dark-color">${mvo.nickname},${mvo.age}</h3>
+								<h6 class="theme-color lead">
+									<span class="glyphicon">&#xe139;</span> ${mvo.job}
+								</h6>
+
+								<p>${mvo.aboutme}</p>
 								<div class="row about-list">
 									<div class="col-md-6">
-										<div class="media">
-											
-											<label><i class="material-icons">&#xe7e9;</i> 생일</label>
-											<p>4th april 1997</p>
-										</div>
+										<%-- <div class="media">											
+											<label><i class="material-icons">&#xe7e9;</i> 성별</label>
+											<p>${ }</p>
+										</div> --%>
 										<div class="media">
 											<label><i class="material-icons">&#xe7fd;</i> MBTI</label>
-											<p> ISTP</p>
+											<p>${mvo.mbti}</p>
 										</div>
 										<div class="media">
-											<label><span class="glyphicon glyphicon-map-marker"></span> 거주 지역</label>
-											<p>광주광역시 동구</p>
+											<label><span class="glyphicon glyphicon-map-marker"></span>
+												거주 지역</label>
+											<p>${mvo.address[0].replace('[','')}</p>
 										</div>
-										
+
 									</div>
+
 									<div class="col-md-6">
 										<div class="media">
 											<label><i class="material-icons">school</i> 학력</label>
-											<p>대학교 재학 </p>
+											<p>${mvo.school}</p>
 										</div>
 										<div class="media">
-											<label><i style='font-size:24px' class='fas'>&#xf86d;</i>  관심사</label>
-											<p>춤추기</p>
-											<p>음악 듣기</p>
+											<label><i style='font-size: 24px' class='fas'>&#xf86d;</i>
+												관심사</label> <br>
+											<p>${mvo.interest}</p>
+
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -388,23 +429,30 @@ a.slide__next, .slider::after {
 						<div class="row">
 							<div class="col-6 col-lg-4">
 								<div class="count-data text-center">
-									<h6 class="count h2" data-to="500" data-speed="500"><i class='fas fa-dumbbell' style='font-size:24px'></i> 운동 선호</h6>
-									<p class="m-0px font-w-600">YES</p>
+									<h6 class="count h2" data-to="500" data-speed="500">
+										<i class='fas fa-dumbbell' style='font-size: 24px'></i> 운동 선호
+									</h6>
+									<p class="m-0px font-w-600">${mvo.sport}</p>
 								</div>
 							</div>
 							<div class="col-6 col-lg-4">
 								<div class="count-data text-center">
-									<h6 class="count h2" data-to="150" data-speed="150"><i class='fas fa-wine-glass-alt' style='font-size:36px'></i> 음주 여부</h6>
-									<p class="m-0px font-w-600">NO</p>
+									<h6 class="count h2" data-to="150" data-speed="150">
+										<i class='fas fa-wine-glass-alt' style='font-size: 36px'></i>
+										음주 여부
+									</h6>
+									<p class="m-0px font-w-600">${mvo.drinking}</p>
 								</div>
 							</div>
 							<div class="col-6 col-lg-4">
 								<div class="count-data text-center">
-									<h6 class="count h2" data-to="850" data-speed="850"><i class='fas fa-smoking' style='font-size:24px'></i> 흡연 여부</h6>
-									<p class="m-0px font-w-600">YES</p>
+									<h6 class="count h2" data-to="850" data-speed="850">
+										<i class='fas fa-smoking' style='font-size: 24px'></i> 흡연 여부
+									</h6>
+									<p class="m-0px font-w-600">${mvo.smoking }</p>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>

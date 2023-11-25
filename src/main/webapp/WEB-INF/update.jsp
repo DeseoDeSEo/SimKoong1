@@ -386,7 +386,7 @@ a.slide__next,
 											</div>
 											<div class="col-sm-9">										
 												<input type="text" id="address" name="address"
-													value="${mvo.address}">
+													value="${mvo.address[0].replace('[','')}">
 											</div>
 										</div>
 										<hr>
@@ -481,16 +481,16 @@ a.slide__next,
 											</div>
 											<div class="col-sm-9">
 												<select class="form-select" id="school" name="school">
-													<option value="doctor">박사</option>
-													<option value="master">석사</option>
-													<option value="university_graduate">대학교 졸업</option>
-													<option value="university">대학교 재학</option>
-													<option value="college_graduate">전문대 졸업</option>
-													<option value="college">전문대 재학</option>
-													<option value="highschool">고등학교</option>
-													<option value="middleschool">중학교</option>
-													<option value="etc">기타</option>
-													<option value="private">비공개</option>
+													<option value="박사">박사</option>
+													<option value="석사">석사</option>
+													<option value="대학교 졸업">대학교 졸업</option>
+													<option value="대학교 재학">대학교 재학</option>
+													<option value="전문대 졸업">전문대 졸업</option>
+													<option value="전문대 재학">전문대 재학</option>
+													<option value="고등학교">고등학교</option>
+													<option value="중학교">중학교</option>
+													<option value="기타">기타</option>
+													<option value="비공개">비공개</option>
 												</select>
 											</div>
 										</div>
